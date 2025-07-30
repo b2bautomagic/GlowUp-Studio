@@ -3,373 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegance Beauty Studio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600?text=Beauty+Salon+Banner');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            background: #ff6f61;
-            color: white;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #e55a50;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 1rem 0;
-        }
-
-        nav ul li {
-            margin: 0 1.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff6f61;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #ff6f61;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        /* Products */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        /* Booking Form */
-        .booking-form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .booking-form label {
-            display: block;
-            margin: 0.5rem 0;
-            font-weight: bold;
-        }
-
-        .booking-form input,
-        .booking-form select,
-        .booking-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        footer a {
-            color: #ff6f61;
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul li {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
+    <title>Glamour Lounge | Premium Beauty Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#booking">Book Now</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <header id="home">
-        <h1>Elegance Beauty Studio</h1>
-        <p>Your one-stop destination for hair, nails, makeup, and skincare.</p>
-        <a href="#booking" class="btn">Book Appointment</a>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-spa"></i></span>
+                <h1>Glamour Lounge</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Your Beauty, Our Passion</h2>
+                <p>Experience premium beauty services tailored just for you</p>
+                <a href="#booking" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200?text=Hairdressing" alt="Hairdressing">
-                <h3>Hairdressing</h3>
-                <p>From cuts to coloring, our expert stylists create your perfect look.</p>
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Hair Services</h3>
+                    <ul>
+                        <li>Haircuts & Styling</li>
+                        <li>Coloring & Highlights</li>
+                        <li>Extensions</li>
+                        <li>Keratin Treatments</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Nail Care</h3>
+                    <ul>
+                        <li>Manicures</li>
+                        <li>Pedicures</li>
+                        <li>Nail Art</li>
+                        <li>Gel & Acrylics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Makeup Artistry</h3>
+                    <ul>
+                        <li>Bridal Makeup</li>
+                        <li>Special Occasion</li>
+                        <li>Editorial</li>
+                        <li>Makeup Lessons</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Skincare</h3>
+                    <ul>
+                        <li>Facials</li>
+                        <li>Peels</li>
+                        <li>Microdermabrasion</li>
+                        <li>LED Therapy</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200?text=Manicure+Pedicure" alt="Manicure & Pedicure">
-                <h3>Manicure & Pedicure</h3>
-                <p>Pamper your hands and feet with our luxurious nail services.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200?text=Makeup+Artistry" alt="Makeup Artistry">
-                <h3>Makeup Artistry</h3>
-                <p>Flawless makeup for any occasion, from natural to glamorous.</p>
-            </div>
-            <div class="service-card">
-                <img srcörs: https://via.placeholder.com/300x200?text=Skincare" alt="Skincare">
-                <h3>Skincare Treatments</h3>
-                <p>Transform your skin with our premium facials and products.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Hair Styling" data-service="hair">
+                    <div class="overlay">
+                        <p>Hair Styling</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Nail Art" data-service="nails">
+                    <div class="overlay">
+                        <p>Nail Art</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Makeup" data-service="makeup">
+                    <div class="overlay">
+                        <p>Makeup</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300" alt="Skincare" data-service="skincare">
+                    <div class="overlay">
+                        <p>Skincare</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products">
-        <h2>Our Skincare Products</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200x150?text=Product+1" alt="Product 1">
-                <h3>Hydrating Serum</h3>
-                <p>$29.99</p>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200x150?text=Product+2" alt="Product 2">
-                <h3>Moisturizing Cream</h3>
-                <p>$24.99</p>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200x150?text=Product+3" alt="Product 3">
-                <h3>Cleansing Gel</h3>
-                <p>$19.99</p>
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Premium Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200" alt="Shampoo">
+                    <h3>Hydrating Shampoo</h3>
+                    <p class="price">$24.99</p>
+                    <button class="btn-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200" alt="Nail Polish">
+                    <h3>Gel Nail Polish</h3>
+                    <p class="price">$12.99</p>
+                    <button class="btn-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200" alt="Face Cream">
+                    <h3>Anti-Aging Cream</h3>
+                    <p class="price">$34.99</p>
+                    <button class="btn-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200" alt="Makeup Kit">
+                    <h3>Professional Makeup Kit</h3>
+                    <p class="price">$49.99</p>
+                    <button class="btn-small">Add to Cart</button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Booking Section -->
-    <section id="booking">
-        <h2>Book Your Appointment</h2>
-        <form class="booking-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="service">Service</label>
-            <select id="service" name="service" required>
-                <option value="">Select a Service</option>
-                <option value="hairdressing">Hairdressing</option>
-                <option value="manicure">Manicure & Pedicure</option>
-                <option value="makeup">Makeup Artistry</option>
-                <option value="skincare">Skincare Treatments</option>
-            </select>
-            
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" required>
-            
-            <label for="message">Additional Notes</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            
-            <button type="submit" class="btn">Submit Booking</button>
-        </form>
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <form class="booking-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Service</option>
+                        <option value="hair">Hair Service</option>
+                        <option value="nails">Nail Service</option>
+                        <option value="makeup">Makeup</option>
+                        <option value="skincare">Skincare</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" required>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p>"The best salon experience! My hair has never looked better."</p>
-                <h4>- Sarah M.</h4>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"The best manicure I've ever had! The attention to detail is incredible."</p>
+                    <div class="client">
+                        <img src="https://via.placeholder.com/80x80" alt="Client">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"My hair has never looked better. The stylists here are true artists!"</p>
+                    <div class="client">
+                        <img src="https://via.placeholder.com/80x80" alt="Client">
+                        <div>
+                            <h4>Michaela Smith</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"Amazing manicure and pedicure, so relaxing and professional!"</p>
-                <h4>- Emily R.</h4>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Us</h2>
+                <p>Glamour Lounge was founded in 2010 with a passion for bringing out the beauty in everyone. Our team of certified professionals stays up-to-date with the latest trends and techniques to provide you with exceptional service.</p>
+                <p>We use only the highest quality products and maintain strict hygiene standards to ensure your safety and satisfaction.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>12+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5000+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15</h3>
+                        <p>Professional Staff</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"Their makeup artistry is top-notch. Perfect for my wedding day!"</p>
-                <h4>- Jessica T.</h4>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/500x400" alt="Our Salon">
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@elegancebeautystudio.com">info@elegancebeautystudio.com</a></p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Beauty Lane, Your City</p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Beauty Street, Your City, ST 12345</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@glamourlounge.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon-Fri: 9am-7pm<br>Sat: 9am-5pm<br>Sun: 10am-4pm</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291234!2d-73.98784492453306!3d40.74844097138998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689878810635!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 GlowUp Beauty Studio. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glamour Lounge</h3>
+                    <p>Your destination for premium beauty services and products.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Hair</a></li>
+                        <li><a href="#">Nails</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Skincare</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Glamour Lounge. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const sectionId = this.getAttribute('href');
-                document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Form submission (basic alert for demo)
-        document.querySelector('.booking-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Booking submitted! We will contact you soon.');
-            this.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
