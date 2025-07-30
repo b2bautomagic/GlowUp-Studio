@@ -1,139 +1,375 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowUp Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Outfit', sans-serif;
-    }body {
-  background-color: #fff9f7;
-  color: #333;
-  line-height: 1.6;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Beauty Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-header {
-  background: linear-gradient(to right, #ff8ca7, #ffc3a0);
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600?text=Beauty+Salon+Banner');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
 
-header p {
-  font-size: 1.2rem;
-}
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem 1.5rem;
-}
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
 
-.service-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .btn {
+            background: #ff6f61;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.1);
-}
+        .btn:hover {
+            background: #e55a50;
+        }
 
-.service-card h3 {
-  color: #e36488;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
-.service-card p {
-  color: #666;
-  font-size: 1rem;
-}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
 
-.cta {
-  background: #e36488;
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-  margin-top: 3rem;
-}
+        nav ul li {
+            margin: 0 1.5rem;
+        }
 
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
 
-.cta a {
-  display: inline-block;
-  background: white;
-  color: #e36488;
-  font-weight: 600;
-  padding: 0.75rem 2rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
 
-.cta a:hover {
-  background: #ffe6ec;
-}
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #fff0f5;
-  font-size: 0.9rem;
-  color: #888;
-}
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff6f61;
+        }
 
-  </style>
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Booking Form */
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .booking-form label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>GlowUp Studio</h1>
-    <p>Your one-stop beauty destination</p>
-  </header>  <section class="services">
-    <div class="service-card">
-      <h3>Hairdressing</h3>
-      <p>Professional cuts, styling, coloring, and hair treatments to keep your look fresh and fierce.</p>
-    </div>
-    <div class="service-card">
-      <h3>Manicure & Pedicure</h3>
-      <p>From classic to glam, treat your hands and feet to a flawless finish.</p>
-    </div>
-    <div class="service-card">
-      <h3>Nail Art</h3>
-      <p>Creative, trendy, or elegant – we bring your nail art vision to life.</p>
-    </div>
-    <div class="service-card">
-      <h3>Makeup Artistry</h3>
-      <p>Glam up for any event with our pro makeup artists ready to make you shine.</p>
-    </div>
-    <div class="service-card">
-      <h3>Skincare Products</h3>
-      <p>Top-tier beauty and skincare products to keep you glowing every day.</p>
-    </div>
-  </section>  <section class="cta">
-    <h2>Want a Website Like This?</h2>
-    <p>Stand out online and attract more clients with a beautiful site that reflects your brand.</p>
-    <a href="#">Let’s Build Yours →</a>
-  </section>  <footer>
-    &copy; 2025 GlowUp Studio. Designed for modern beauty entrepreneurs.
-  </footer>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#booking">Book Now</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <h1>Elegance Beauty Studio</h1>
+        <p>Your one-stop destination for hair, nails, makeup, and skincare.</p>
+        <a href="#booking" class="btn">Book Appointment</a>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://via.placeholder.com/300x200?text=Hairdressing" alt="Hairdressing">
+                <h3>Hairdressing</h3>
+                <p>From cuts to coloring, our expert stylists create your perfect look.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/300x200?text=Manicure+Pedicure" alt="Manicure & Pedicure">
+                <h3>Manicure & Pedicure</h3>
+                <p>Pamper your hands and feet with our luxurious nail services.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/300x200?text=Makeup+Artistry" alt="Makeup Artistry">
+                <h3>Makeup Artistry</h3>
+                <p>Flawless makeup for any occasion, from natural to glamorous.</p>
+            </div>
+            <div class="service-card">
+                <img srcörs: https://via.placeholder.com/300x200?text=Skincare" alt="Skincare">
+                <h3>Skincare Treatments</h3>
+                <p>Transform your skin with our premium facials and products.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Skincare Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x150?text=Product+1" alt="Product 1">
+                <h3>Hydrating Serum</h3>
+                <p>$29.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x150?text=Product+2" alt="Product 2">
+                <h3>Moisturizing Cream</h3>
+                <p>$24.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x150?text=Product+3" alt="Product 3">
+                <h3>Cleansing Gel</h3>
+                <p>$19.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <h2>Book Your Appointment</h2>
+        <form class="booking-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+                <option value="">Select a Service</option>
+                <option value="hairdressing">Hairdressing</option>
+                <option value="manicure">Manicure & Pedicure</option>
+                <option value="makeup">Makeup Artistry</option>
+                <option value="skincare">Skincare Treatments</option>
+            </select>
+            
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"The best salon experience! My hair has never looked better."</p>
+                <h4>- Sarah M.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Amazing manicure and pedicure, so relaxing and professional!"</p>
+                <h4>- Emily R.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Their makeup artistry is top-notch. Perfect for my wedding day!"</p>
+                <h4>- Jessica T.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@elegancebeautystudio.com">info@elegancebeautystudio.com</a></p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Beauty Lane, Your City</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GlowUp Beauty Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href');
+                document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form submission (basic alert for demo)
+        document.querySelector('.booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Booking submitted! We will contact you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
